@@ -81,7 +81,7 @@ All APIs are tested using **Postman** for reliability and correctness.
 
 ---
 
-**Live Demo:** Clone the Repository and run **npm run dev** and have access to website. 
+**Live Demo:** Clone the Repository and run **npm run dev** and have access to website through **localhost**. 
 
 ---
 
