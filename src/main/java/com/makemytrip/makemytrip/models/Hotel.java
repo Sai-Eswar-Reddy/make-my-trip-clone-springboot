@@ -2,12 +2,13 @@ package com.makemytrip.makemytrip.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.bson.types.ObjectId;
 
 @Document(collection = "hotels")
 public class Hotel {
 
     @Id
-    private String id;   // ✅ IMPORTANT: use "id" (not _id)
+    private ObjectId id;
 
     private String hotelName;
     private String location;
@@ -15,15 +16,17 @@ public class Hotel {
     private int availableRooms;
     private String amenities;
 
-    // GETTERS & SETTERS
-
+    // ✅ GET ID AS STRING (for frontend)
     public String getId() {
-        return id;
+        return id != null ? id.toHexString() : null;
     }
 
-    public void setId(String id) {
+    // ✅ SET ID AS OBJECTID
+    public void setId(ObjectId id) {
         this.id = id;
     }
+
+    // OTHER GETTERS & SETTERS
 
     public String getHotelName() {
         return hotelName;
