@@ -25,11 +25,6 @@ public class RootController {
         return "✅ It's running on port 8080!";
     }
 
-    @GetMapping("/hotel")
-    public ResponseEntity<List<Hotel>> getallhotel(){
-        List<Hotel> hotels=hotelRepository.findAll();
-        return ResponseEntity.ok(hotels);
-    }
 
     @GetMapping("/flight")
     public ResponseEntity<List<Flight>> getallflights(){

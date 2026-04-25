@@ -16,7 +16,7 @@ public class HotelController {
     private HotelRepository hotelRepository;
 
     @GetMapping
-    public List<Hotel> getHotels() {
-        return hotelRepository.findAll();
+    public String getHotels() {
+        return "API WORKING";
     }
 }
